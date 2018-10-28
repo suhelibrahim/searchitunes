@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import{HttpModule, Http, Response} from '@angular/http';
 import { AppComponent } from './app.component';
 import {searchService} from './app.service';
-
-
 @NgModule({
   declarations: [
     AppComponent
