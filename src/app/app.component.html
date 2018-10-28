@@ -1,27 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div style="text-align:center">
+<div class="wrapper" style="text-align:center">
+  <div class="header">
   <h1>
     Welcome to {{ title }}!
   </h1>
-
-  <div class="socialmedia">
-    <a class="btn1" href="#">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-    </a>
-    <a class="btn1" href="#">
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-      </a>
-    <a class="btn1" href="#">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-      </a>
-    <a class="btn1" href="https://www.linkedin.com/in/ibrahim-shaik-98b2a3173/">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-
-  </div>
-
-<a class="btn2" href="https://www.apple.com/">
+</div>
+  
+<div class="main">
+<a class="btn2" href="https://www.apple.com/itunes/">
     <i class="fa fa-apple" aria-hidden="true"></i>
   <!--<img width="300" alt="Angular Logo" src="https://notyouraveragetype.files.wordpress.com/2015/07/itunes-logo-transparent-background-i81.png">-->
   </a>
@@ -33,14 +20,32 @@
 <button type="submit" class="btn btn-primary" (click)="doSearch(search.value)">Submit</button>
 </div>
 </div>
-</div>
 <div class="lead" *ngIf="loading">Loading...</div>
-<ul class="list-group">
-    <li class="list-group-item"
-        *ngFor="let track of itunes.results">
-      <img src="{{track.thumbnail}}">
-      <a target="_blank"
-         href="{{track.link}}">{{ track.name }}
+    <ul class="list-group">
+        <li class="list-group-item"
+            *ngFor="let track of itunes.results">
+          <img src="{{track.thumbnail}}">
+          <a target="_blank"
+             href="{{track.link}}">{{ track.name }}
+          </a>
+        </li>
+    </ul>
+</div>
+
+<div class="footer">
+    <a class="btn1" href="#">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a class="btn1" href="#">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
       </a>
-    </li>
-  </ul>
+    <a class="btn1" href="#">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+    <a class="btn1" href="https://www.linkedin.com/in/ibrahim-shaik-98b2a3173/" target="blank">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+
+  </div>
+
+</div>
