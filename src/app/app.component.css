@@ -1,12 +1,23 @@
 .wrapper{
     display: grid;
-    grid-template-rows:60px auto 100px; 
+    grid-template-rows:60px auto 450px; 
     grid-template-columns: repeat(12,1fr);
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-areas: 
     "h h h h h h h h h h h h"
-    "s m m m m m m m m m m m"
+    ". m m m m m m m m m m ."
     "f f f f f f f f f f f f"
+}
+
+ul{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+}
+
+ul li{
+    padding: 30px;
 }
 
 .header{
@@ -19,12 +30,18 @@
     background-color: #f1f1f1;
 }
 
+.sidebar1{
+    grid-area: sb;
+    background-color: #f1f1f1;
+}
+
 .main{
     grid-area: m;
 }
 .footer{
     grid-area: f;
     background-color: #f1f1f1;
+    padding: 100px;
 }
 
 
@@ -142,13 +159,3 @@
 }
 
 
-ul{    
-    height: 2fr;
-    width: 10fr;
-    border: #0f0f0e;
-
-}
-ul li{
-    text-align: left;
-    padding: 30px;
-}

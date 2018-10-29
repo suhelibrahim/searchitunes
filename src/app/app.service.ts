@@ -36,7 +36,7 @@ export class searchService{
                         item.trackName,
                         item.artistName,
                         item.trackViewUrl,
-                        item.artworkUrl30,
+                        item.artworkUrl100,
                         item.artistId
                     );
                   });
