@@ -1,20 +1,29 @@
 .wrapper{
     display: grid;
-    grid-template-rows:auto 8fr 1fr; 
-    grid-template-columns: 1fr auto;
+    grid-template-rows:60px auto 100px; 
+    grid-template-columns: repeat(12,1fr);
     grid-gap: 10px;
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "s m m m m m m m m m m m"
+    "f f f f f f f f f f f f"
 }
 
 .header{
-    grid-column: 1/-1;
+    grid-area: h;
+    background-color: #f1f1f1;
+}
+
+.sidebar{
+    grid-area: s;
     background-color: #f1f1f1;
 }
 
 .main{
-    grid-column: 1/-1;
+    grid-area: m;
 }
-
 .footer{
+    grid-area: f;
     background-color: #f1f1f1;
 }
 
