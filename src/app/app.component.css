@@ -1,6 +1,6 @@
 .wrapper{
     display: grid;
-    grid-template-rows:60px auto 450px; 
+    grid-template-rows:60px auto 200px; 
     grid-template-columns: repeat(12,1fr);
     grid-gap: 5px;
     grid-template-areas: 
@@ -12,12 +12,12 @@
 ul{
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-auto-rows: 210px;
 }
 
 ul li{
-    padding: 30px;
+    padding: 35px;
 }
 
 .header{
@@ -37,11 +37,13 @@ ul li{
 
 .main{
     grid-area: m;
+    padding-bottom: 210px;
+    padding-top: 40px;
 }
 .footer{
     grid-area: f;
     background-color: #f1f1f1;
-    padding: 100px;
+    padding-top: 30px;
 }
 
 
