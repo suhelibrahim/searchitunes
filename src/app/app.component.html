@@ -24,14 +24,14 @@
 <button type="submit" class="btn btn-primary" (click)="doSearch(search.value)">Submit</button>
 </div>
 </div>
-<div class="displaybar">
+<h3><div class="displaybar">
     {{search.value}}
-  </div>
+  </div></h3>
 <div class="lead" *ngIf="loading">Loading...</div>
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let track of itunes.results">
-          <img src="{{track.thumbnail}}"><br>
-          <a target="_blank" href="{{track.link}}">{{ track.name }}</a>
+          <img src="{{track.thumbnail}}"><br><br>
+          <h6><a target="_blank" href="{{track.link}}">{{ track.name }}</a></h6>
         </li>
     </ul>
 </div>
