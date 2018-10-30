@@ -24,9 +24,9 @@
 <button type="submit" class="btn btn-primary" (click)="doSearch(search.value)">Submit</button>
 </div>
 </div>
-<h3><div class="displaybar">
+<h2><div class="displaybar">
     {{search.value}}
-  </div></h3>
+  </div></h2>
 <div class="lead" *ngIf="loading">Loading...</div>
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let track of itunes.results">
