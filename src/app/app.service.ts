@@ -27,7 +27,7 @@ export class searchService{
 
     search(term:string){
         let promise= new Promise((resolve,reject)=>{
-            let qUrl=`${this.rootUrl}?term=${term}&media=music&limit=20`;
+            let qUrl=`${this.rootUrl}?term=${term}&media=music&limit=200`;
             this.http.get(qUrl)
             .toPromise()
             .then(res=>{

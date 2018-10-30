@@ -9,6 +9,7 @@ import { searchService } from './app.service';
 
 export class AppComponent {
   title = 'iTunes';
+  name='Artist Name:';
   sr='Results for song';
   private loading: boolean = false;
 
