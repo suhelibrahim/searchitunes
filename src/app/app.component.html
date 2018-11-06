@@ -27,7 +27,9 @@
 <h2><div class="displaybar">
     {{search.value}}
   </div></h2>
-<div class="lead" *ngIf="loading">Loading...</div>
+  
+<div class="loading" *ngIf="loading">Loading...</div>
+
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let track of itunes.results">
           <img src="{{track.thumbnail}}"><br><br>
