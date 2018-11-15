@@ -11,9 +11,9 @@ export class AppComponent {
   title = 'iTunes';
   name='Artist Name:';
   sr='Results for song';
-  private loading: boolean = false;
+  public loading: boolean = false;
 
-  constructor(private itunes:searchService){
+  constructor(public itunes:searchService){
   }
   
   doSearch(term:string){
