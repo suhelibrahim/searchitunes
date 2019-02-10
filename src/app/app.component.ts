@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { searchService } from './app.service';
+import {HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +10,15 @@ import { searchService } from './app.service';
 
 export class AppComponent {
   title = 'iTunes';
-  name='Artist Name:';
-  sr='Results for song';
-  public loading: boolean = false;
+  name = 'Artist Name:';
+  sr = 'Results for song';
+  public loading = false;
 
-  constructor(public itunes:searchService){
+  constructor(public itunes: searchService) {
   }
-  
-  doSearch(term:string){
-      this.loading=true;
-      this.itunes.search(term).then(()=>{this.loading=false;});
+
+  doSearch(term: string) {
+      this.loading = true;
+      this.itunes.search(term).then(() => {this.loading = false; });
   }
 }

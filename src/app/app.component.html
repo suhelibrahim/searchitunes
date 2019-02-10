@@ -2,56 +2,73 @@
 
 <div class="wrapper" style="text-align:center">
   <div class="header">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-
-<div class="sidebar">
-
-</div>
-  
-<div class="main">
-<a class="btn2" href="https://www.apple.com/itunes/">
-    <i class="fa fa-apple" aria-hidden="true"></i>
-  <!--<img width="300" alt="Angular Logo" src="https://notyouraveragetype.files.wordpress.com/2015/07/itunes-logo-transparent-background-i81.png">-->
-  </a>
-<div class="container">
-<div class="form-group">
-<input type="search" placeholder="Search here" class="form-control" #search>
-</div><br>
-<div class="form-group">
-<button type="submit" class="btn btn-primary" (click)="doSearch(search.value)">Submit</button>
-</div>
-</div>
-<h2><div class="displaybar">
-    {{search.value}}
-  </div></h2>
-  
-<div class="loading" *ngIf="loading">Loading...</div>
-
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let track of itunes.results">
-          <img src="{{track.thumbnail}}"><br><br>
-          <h6><a target="_blank" href="{{track.link}}">{{ track.name }}</a></h6>
-        </li>
-    </ul>
-</div>
-
-<div class="footer">
-    <a class="btn1" href="#">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-    </a>
-    <a class="btn1" href="#">
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-      </a>
-    <a class="btn1" href="#">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-      </a>
-    <a class="btn1" href="https://www.linkedin.com/in/ibrahim-shaik-98b2a3173/" target="blank">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <h3>Designed by Suhel Ibrahim</h3>
+    <h1 appEnterBtn>Welcome to {{ title }}!</h1>
   </div>
 
+  <div class="sidebar"></div>
+
+  <div class="main">
+    <a class="btn2" href="https://www.apple.com/itunes/">
+      <i class="fa fa-apple" aria-hidden="true"></i>
+      <!--<img width="300" alt="Angular Logo" src="https://notyouraveragetype.files.wordpress.com/2015/07/itunes-logo-transparent-background-i81.png">-->
+    </a>
+    <div class="container">
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Search here"
+          class="form-control"
+          (keydown.enter)="doSearch(search.value)"
+          appEnterBtn
+          #search
+        />
+      </div>
+      <br />
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          (click)="doSearch(search.value)"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <h2>
+      <div class="displaybar">
+        {{ search.value }}
+      </div>
+    </h2>
+
+    <div class="loading" *ngIf="loading">Loading...</div>
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let track of itunes.results">
+        <img src="{{ track.thumbnail }}" /><br /><br />
+        <h6>
+          <a target="_blank" href="{{ track.link }}">{{ track.name }}</a>
+        </h6>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <a class="btn1" href="#">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a class="btn1" href="#">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+    <a class="btn1" href="#">
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+    <a
+      class="btn1"
+      href="https://www.linkedin.com/in/ibrahim-shaik-98b2a3173/"
+      target="blank"
+    >
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <h3>Designed by Suhel Ibrahim</h3>
+  </div>
 </div>
